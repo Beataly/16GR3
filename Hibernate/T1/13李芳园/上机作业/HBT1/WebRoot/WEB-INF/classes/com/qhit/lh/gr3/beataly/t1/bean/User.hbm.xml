@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN" "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd" >
+<hibernate-mapping>
+	<class name="com.qhit.lh.gr3.beataly.t1.bean.User" table="t_use">
+		<id name="id" column="id" type="integer">
+		<!-- 主键自增方式 -->
+		<generator class="native"></generator>
+		
+		</id>
+		<property name="uname" column="uname" type="string"></property>
+		<property name="upwd" column="upwd" type="string"></property>
+		<property name="brithday" column="brithday" type="string"></property>
+		<property name="sex" column="sex" type="string"></property>
+		<property name="enbale" column="enbale" type="integer"></property>
+	</class>
+</hibernate-mapping>
