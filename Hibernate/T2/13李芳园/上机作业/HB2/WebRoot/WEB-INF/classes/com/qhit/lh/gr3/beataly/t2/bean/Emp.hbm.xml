@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN" "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd" >
+<hibernate-mapping>
+	<class name="com.qhit.lh.gr3.beataly.t2.bean.Emp" table="t_emp">
+		<!--主键的配置 -->
+		<id name="eid" column="eid" type="integer">
+			<generator class="native"></generator>
+	</id>
+	<!--成员的属性配置 -->
+	<property name="empName" column="empName" type="string"></property>
+	<property name="empSex" column="empSex" type="string"></property>
+	<property name="birthday" column="birthday" type="string"></property>
+	<property name="deptId" column="deptId" type="integer"></property>
+	<!-- 一对一关系的映射 -->
+	<one-to-one name="user" class="com.qhit.lh.gr3.beataly.t2.bean.User" cascade="all"></one-to-one>
+	</class>
+</hibernate-mapping>
