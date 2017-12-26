@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN" "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd" >
+<hibernate-mapping>
+	<class name="com.qhit.lh.gr3.beataly.t2.bean.User" table="t_userInfo">
+		<!--主键的配置 -->
+		<id name="userId" column="userId" type="integer">
+		<!-- 取值自增表中的字段 -->
+			<generator class="foreign">
+				<param name="property">emp</param>
+			</generator>
+	</id>
+	<!--成员的属性配置 -->
+	<property name="userName" column="userName" type="string"></property>
+	<property name="password" column="password" type="string"></property>
+	<!-- 一对一关系的映射 -->
+	<one-to-one name="emp" class="com.qhit.lh.gr3.beataly.t2.bean.Emp" cascade="all"></one-to-one>
+	<!-- 多对多 -->
+	<set name="roles" table="role_user">
+		<key column="userId"></key>
+		<many-to-many class="com.qhit.lh.gr3.beataly.t2.bean.Role" column="roleId"></many-to-many>
+	</set>
+	</class>
+</hibernate-mapping>

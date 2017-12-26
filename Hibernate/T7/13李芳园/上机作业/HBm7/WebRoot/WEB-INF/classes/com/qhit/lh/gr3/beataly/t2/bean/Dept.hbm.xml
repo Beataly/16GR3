@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN" "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd" >
+<hibernate-mapping>
+	<class name="com.qhit.lh.gr3.beataly.t2.bean.Dept" table="t_dept">
+	<!--主键的配置 -->
+		<id name="deptId" column="deptId" type="integer">
+		
+			<generator class="native"></generator>
+		</id>
+		<property name="deptName" column="deptName" type="string"></property>
+		<property name="address" column="address" type="string"></property>
+		<!-- inverse="true" 表示外键维护交给对方即多这方负责 -->
+		<!-- inverse="false" 表示外键维护不交给对方，仍由一方负责  -->
+		<!-- 解决方式一：映射文件中inverse属性改变为"false" 而代码不需要修改 -->
+		<!-- 解决方式二：映射文件不改变 而代码需要修改 -->
+		<set name="emps" lazy="false" cascade="save-update">
+		
+			<key column="deptId"></key>
+			<one-to-many class="com.qhit.lh.gr3.beataly.t2.bean.Emp"/>
+		</set>
+	</class>
+</hibernate-mapping>
