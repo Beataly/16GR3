@@ -1,0 +1,15 @@
+SQL> show sga
+
+Total System Global Area 3323752448 bytes                                       
+Fixed Size                  2180304 bytes                                       
+Variable Size            1845496624 bytes                                       
+Database Buffers         1459617792 bytes                                       
+Redo Buffers               16457728 bytes                                       
+SQL> show sga;
+
+Total System Global Area 3323752448 bytes                                       
+Fixed Size                  2180304 bytes                                       
+Variable Size            1845496624 bytes                                       
+Database Buffers         1459617792 bytes                                       
+Redo Buffers               16457728 bytes                                       
+SQL> spool off
