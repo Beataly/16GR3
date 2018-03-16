@@ -1,0 +1,115 @@
+SQL> select floor(3.14) from dual;
+
+FLOOR(3.14)                                                                     
+-----------                                                                     
+          3                                                                     
+
+SQL> select round(3.1415926,3) from dual;
+
+ROUND(3.1415926,3)                                                              
+------------------                                                              
+             3.142                                                              
+
+SQL> select mod(10,3) from dual;
+
+ MOD(10,3)                                                                      
+----------                                                                      
+         1                                                                      
+
+SQL> select power(2,10) from dual;
+
+POWER(2,10)                                                                     
+-----------                                                                     
+       1024                                                                     
+
+SQL> select length('hello') from dual;
+
+LENGTH('HELLO')                                                                 
+---------------                                                                 
+              5                                                                 
+
+SQL> select upper('hello') from dual;
+
+UPPER                                                                           
+-----                                                                           
+HELLO                                                                           
+
+SQL> select translate('jack','j','b') from dual;
+
+TRAN                                                                            
+----                                                                            
+back                                                                            
+
+SQL> select translate('jack','j','b') from dual;
+
+TRAN                                                                            
+----                                                                            
+back                                                                            
+
+SQL> select replace('jack','j','bl') from dual;
+
+REPLA                                                                           
+-----                                                                           
+black                                                                           
+
+SQL> select instr('hello','e') from dual;
+
+INSTR('HELLO','E')                                                              
+------------------                                                              
+                 2                                                              
+
+SQL> select sysdate from dual;
+
+SYSDATE                                                                         
+--------------                                                                  
+16-3月 -18                                                                      
+
+SQL> select months_between(sysdate,to_date('2013-10-10','yyyy-mm-dd')) from dual;
+
+MONTHS_BETWEEN(SYSDATE,TO_DATE('2013-10-10','YYYY-MM-DD'))                      
+----------------------------------------------------------                      
+                                                53.2151523                      
+
+SQL> select add_months(sysdate,5) from dual;
+
+ADD_MONTHS(SYS                                                                  
+--------------                                                                  
+16-8月 -18                                                                      
+
+SQL> select next_day(sysdate,5) from dual;
+
+NEXT_DAY(SYSDA                                                                  
+--------------                                                                  
+22-3月 -18                                                                      
+
+SQL> select last_day(sysdate) from dual;
+
+LAST_DAY(SYSDA                                                                  
+--------------                                                                  
+31-3月 -18                                                                      
+
+SQL> select to_char(sysdate,'yyyy-mm-dd') from dual;
+
+TO_CHAR(SY                                                                      
+----------                                                                      
+2018-03-16                                                                      
+
+SQL> select to_char(sysdate,'yyyy-mon-dd') from dual;
+
+TO_CHAR(SYSDATE,                                                                
+----------------                                                                
+2018-3月 -16                                                                    
+
+SQL> select to_char(sysdate,'add') from dual;
+
+TO_CHAR                                                                         
+-------                                                                         
+公元6                                                                           
+
+SQL> select to_char(sysdate) from dual;
+
+TO_CHAR(SYSDAT                                                                  
+--------------                                                                  
+16-3月 -18                                                                      
+
+SQL> spool off
